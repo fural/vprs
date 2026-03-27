@@ -21,6 +21,5 @@ export default defineConfig({
     environment: "jsdom",
     include: ["src/**/*.test.{ts,tsx}"],
     setupFiles: ["config/vitest/vitest-setup.ts"],
-    reporters: "verbose",
   },
 });
