@@ -23,7 +23,6 @@ function RootComponent() {
           Home
         </Link>
       </div>
-      <hr />
       <Outlet />
 
       {import.meta.env.DEV ? (
