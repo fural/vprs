@@ -1,6 +1,5 @@
 import { setupServer } from "msw/node";
-import { afterEach } from "node:test";
-import { afterAll, beforeAll } from "vite-plus/test";
+import { afterAll, afterEach, beforeAll } from "vite-plus/test";
 
 // Add request handlers here. These will be used in the tests.
 const handlers: any[] = [];

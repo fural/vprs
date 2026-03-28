@@ -17,6 +17,9 @@ export default defineConfig({
     }),
     react(),
   ],
+  fmt: {
+    ignorePatterns: ["src/routeTree.gen.ts"],
+  },
   test: {
     environment: "jsdom",
     include: ["src/**/*.test.{ts,tsx}"],

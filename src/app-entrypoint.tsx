@@ -1,4 +1,4 @@
-import "./core/i18n/i18n-config";
+import "./core/i18n";
 import ReactDOM from "react-dom/client";
 import { AppProviders } from "./app-providers";
 import { AppRouter } from "./app-router";
