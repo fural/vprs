@@ -19,6 +19,7 @@ export default defineConfig({
   ],
   fmt: {
     ignorePatterns: ["src/routeTree.gen.ts"],
+    printWidth: 80,
   },
   test: {
     environment: "jsdom",

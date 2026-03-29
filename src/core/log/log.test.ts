@@ -8,7 +8,10 @@ describe("Test suite for core/log", () => {
       { severity: "info", expected: logClient.log },
       { severity: "warning", expected: logClient.warn },
       { severity: "error", expected: logClient.error },
-    ] satisfies { severity: LogSeverity; expected: unknown }[])(
+    ] satisfies {
+      severity: LogSeverity;
+      expected: unknown;
+    }[])(
       "getClientLogFromSeverity($severity) should return logClient.$severity",
       ({ severity, expected }) => {
         expect(getClientLogFromSeverity(severity)).toEqual(expected);

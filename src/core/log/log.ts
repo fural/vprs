@@ -17,8 +17,14 @@ export const logServer: unknown = undefined;
 export const logClient: LogClientApi = Object.create(console);
 
 export const getClientLogFromSeverity = (severity: LogSeverity) =>
-  severity === "error" ? logClient.error : severity === "warning" ? logClient.warn : logClient.log;
+  severity === "error"
+    ? logClient.error
+    : severity === "warning"
+      ? logClient.warn
+      : logClient.log;
 
-logClient.logSeverity = (severity, ...args) => getClientLogFromSeverity(severity)(...args);
+logClient.logSeverity = (severity, ...args) =>
+  getClientLogFromSeverity(severity)(...args);
 
-logClient.logColor = (color, ...args) => logClient.log("%c" + args?.join(" "), `color: ${color}`);
+logClient.logColor = (color, ...args) =>
+  logClient.log("%c" + args?.join(" "), `color: ${color}`);

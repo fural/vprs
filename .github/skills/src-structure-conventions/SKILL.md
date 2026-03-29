@@ -79,7 +79,10 @@ Prefer these conventions for new work. When refactoring, move toward this struct
 // src/modules/info/schemas/info-schema.ts
 import { z } from "zod";
 
-export const infoSchema = z.object({ id: z.string(), name: z.string() });
+export const infoSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+});
 export type Info = z.infer<typeof infoSchema>;
 ```
 
